@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Request JSON Test</title>
+
+    <!-- add highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+      mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+      // chai has a lot of stuff, let's make assert global
+      let assert = chai.assert;
+    </script>
+
+    <!-- add lodash -->
+    <script type="module" src="./lodash.js"></script>
+  </head>
+  <body>
+    <a href="#" id="get-data">Replace data with REHAB</a>
+    <div id="show-data"></div>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <div id="container" style="width:100%; height:400px;"></div>
+    <script type="module" src="example.js"></script>
+
+    <!-- the script with tests (describe, it...) -->
+    <!-- TODO: This does not seem to work -->
+    <script type="module" src="test.js"></script>
+
+    <!-- the element with id="mocha" will contain test results -->
+    <div id="mocha"></div>
+
+    <!-- run tests! -->
+    <script>
+      mocha.run();
+    </script>
+
+  </body>
+</html>
